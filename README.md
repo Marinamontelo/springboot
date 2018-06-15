@@ -8,3 +8,4 @@
  5. Open <http://localhost:8080/> or <http://localhost:8080/sample.txt> in your
     browser.
 # springboot
+# graylog
