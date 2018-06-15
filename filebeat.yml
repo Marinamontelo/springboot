@@ -1,0 +1,37 @@
+filebeat:
+  prospectors:
+  - encoding: utf-8
+    exclude_files: []
+    fields:
+      collector_node_id: 608827-Cercomp
+      gl2_source_collector: 48929b84-2e9f-4b55-baf5-0cc4d5a735af
+      type: log
+    ignore_older: 0
+    paths:
+    - /home/marina/logs/*.log
+    scan_frequency: 10s
+    tail_files: true
+    type: log
+  - encoding: plain
+    exclude_files: []
+    fields:
+      collector_node_id: 608827-Cercomp
+      gl2_source_collector: 48929b84-2e9f-4b55-baf5-0cc4d5a735af
+      type: log
+    ignore_older: 0
+    paths:
+    - /home/marina/logs2/*.log
+    scan_frequency: 10s
+    tail_files: true
+    type: log
+output:
+  logstash:
+    hosts:
+    - 200.137.222.65:5044
+path:
+  data: /var/cache/graylog/collector-sidecar/filebeat/data
+  logs: /var/log/graylog/collector-sidecar
+tags:
+- linux
+- apache
+- redis

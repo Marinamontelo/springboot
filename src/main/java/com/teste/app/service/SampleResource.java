@@ -1,6 +1,7 @@
 package com.teste.app.service;
 
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -9,13 +10,20 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class SampleResource {
 	
-	private static Logger logger = Logger.getLogger(SampleResource.class);
-	private static final Logger log = LoggerFactory.getLogger(Foo.class);
-
-    @RequestMapping("/teste")
-    public String hello() {
-    	logger.error("aAdada");
-        return "Hello World!";
+	private static final Logger logger = LoggerFactory.getLogger(SampleResource.class);
+	
+    @RequestMapping("/marina")
+    public void hello(Object object) {
+    	try {
+    		logger.error("I'M PICKE RICK AAAAAAAAAA");
+    		logger.error("I'M PICKE RICK AAAAAAAAAA");
+    		logger.error("I'M PICKE RICK AAAAAAAAAA");
+    		logger.error("I'M PICKE RICK AAAAAAAAAA");
+    		logger.error("I'M PICKE RICK AAAAAAAAAA");
+    		logger.error("I'M PICKE RICK AAAAAAAAAA");
+		} catch (Exception e) {
+			e.getMessage();
+		} 
     }
 
 }
